@@ -1,0 +1,62 @@
+# Gitignore for AI Agent Configuration Template
+# This template should track ALL configuration files
+# Only ignore OS and editor-specific files
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor files (but keep template files)
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# Node modules (if any scripts use Node)
+node_modules/
+
+# Python (if any scripts use Python)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Explicitly include all template files (force track them)
+!.cursor/
+!.cursor/**
+!.cursorrules
+!.claude/
+!.claude/**
+!*.sh
+!*.ps1
+!*.md
+!docs/
+!docs/**
+!setup.sh
+!setup.ps1
+!interactive-setup.sh
+!customize-config.sh
+!cleanup-template.sh
+!AGENT-SETUP-INSTRUCTIONS.md
+!CLAUDE-SUPPORT.md
+!SETUP-INSTRUCTIONS.md
+!README.md
+
