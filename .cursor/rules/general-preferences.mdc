@@ -1,0 +1,53 @@
+---
+alwaysApply: true
+---
+
+# General Development Preferences
+
+## Code Style
+
+- Follow project-specific style guides
+- Use consistent formatting throughout
+- Maintain consistent naming conventions
+- Keep functions focused and small
+- Write self-documenting code
+
+## Documentation
+
+- Document complex logic and non-obvious decisions
+- Use clear, descriptive variable and function names
+- Include docstrings/comments for public APIs
+- Keep comments up to date with code changes
+- Document why, not what (code should be self-explanatory)
+
+## Testing
+
+- Write tests alongside code
+- Test edge cases and error conditions
+- Keep tests simple and focused
+- Use descriptive test names
+- Ensure tests are idempotent and can run multiple times
+
+## Performance
+
+- Profile before optimizing
+- Use appropriate data structures
+- Minimize unnecessary operations
+- Consider scalability from the start
+- Don't optimize prematurely
+
+## Security
+
+- Never commit secrets or sensitive data
+- Validate and sanitize all inputs
+- Use secure defaults
+- Follow principle of least privilege
+- Keep dependencies up to date
+
+## Version Control
+
+- Write meaningful commit messages
+- Keep commits focused and atomic
+- Use feature branches for significant changes
+- Review changes before committing
+- Use appropriate .gitignore patterns

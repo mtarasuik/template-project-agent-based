@@ -1,0 +1,281 @@
+# AI Agent Configuration - Project Template
+
+## Onboarding
+When starting work on this project, **first read**: `docs/AI-AGENT-ONBOARDING.md` for comprehensive onboarding guidance.
+
+> **Note**: This `.cursorrules` file is automatically loaded by Cursor IDE. For guidance on configuring Cursor effectively, see `docs/CURSOR-CONFIGURATION-GUIDE.md`.
+
+## Setup Instructions
+If asked to "set up this project" or "set up this project with AI agent configuration":
+1. Read `AGENT-SETUP-INSTRUCTIONS.md` for detailed guidance
+2. Run `bash setup.sh` to start the interactive setup process
+3. Guide the user through the questionnaire prompts
+4. Verify setup completed successfully
+
+## Quick Reference
+For detailed workflows, utilities, and common tasks, see: `docs/AI-AGENT-QUICK-REFERENCE.md`
+
+## Critical Project Context
+
+### Project Information
+- **Project Type**: [PROJECT_TYPE] - [Brief description]
+- **Primary Technology Stack**: [List main technologies]
+- **Development Environment**: [Local/WSL/Remote server details]
+- **Key Dependencies**: [List critical dependencies]
+
+### File Paths and Locations
+- **Local Development**: [Path to local project]
+- **Remote/Server Paths**: [If applicable, remote paths]
+- **Configuration Files**: [Location of config files]
+- **Documentation**: `docs/` directory
+
+## Critical Rules (Priority 0: Idempotency and Safety)
+
+### 1. Idempotency
+All code must be **idempotent** and **safe to run multiple times** without affecting previous runs:
+- Check for existing state before making changes
+- Skip operations if target state already exists
+- Log when skipping: "Already configured, skipping"
+- Never assume state - always verify before modifying
+
+### 2. Error Handling
+- Use appropriate exit codes (0=success, 1=general failure, 2=invalid params, etc.)
+- Log all errors with context (operation, location, reason)
+- Never log passwords, keys, tokens, or sensitive data
+- Provide actionable error messages with next steps
+- Implement graceful degradation where possible
+
+### 3. User Experience
+- **No Hanging Functions**: All operations must provide feedback
+- **Progress Indicators**: Show progress for long-running operations
+- **Clear Messages**: Use clear, actionable messages
+- **Timeout Management**: Set appropriate timeouts for all operations
+- **Status Updates**: Provide regular status updates during long operations
+
+### 4. Code Validation
+- **Always validate code** before committing or deploying
+- Run linters, formatters, and type checkers
+- Check for syntax errors, unused imports, and dead code
+- Validate configuration files against schemas
+- Test critical paths before completing tasks
+
+### 5. Resource Management
+- **Check for existing resources** before creating new ones
+- **Update existing resources** when appropriate instead of creating duplicates
+- **Reuse components** with high acceptance and proven reliability
+- **Avoid low acceptance components** unless absolutely necessary
+- **Clean up** temporary resources and failed operations
+
+## Code Quality Priorities
+
+### Priority 0: Idempotency and Safety
+- All operations must be idempotent
+- State detection before modifications
+- Graceful failure handling
+- Rollback capability
+- Comprehensive logging
+
+### Priority 1: Modern Methodologies
+- Use latest stable versions of tools and libraries
+- Follow current best practices and patterns
+- Prefer modern language features and APIs
+- Adopt industry-standard conventions
+- Stay current with framework updates
+
+### Priority 2: Modularity and Reusability
+- Design for reuse and modularity
+- Create reusable components and functions
+- Follow DRY (Don't Repeat Yourself) principles
+- Use dependency injection where appropriate
+- Build composable, testable units
+
+### Priority 3: Performance and Efficiency
+- Optimize for performance without premature optimization
+- Use efficient algorithms and data structures
+- Minimize resource usage (memory, CPU, network)
+- Implement caching where appropriate
+- Profile and measure before optimizing
+
+## Development Workflow
+
+### Before Making Changes
+1. Check for existing implementations or similar code
+2. Review related documentation
+3. Understand the current state of the system
+4. Plan changes to maintain compatibility
+
+### During Development
+1. Write idempotent code
+2. Add comprehensive error handling
+3. Include logging and progress indicators
+4. Validate inputs and outputs
+5. Test incrementally
+
+### After Making Changes
+1. Validate code quality (lint, format, type check)
+2. Test the changes
+3. Update documentation if needed
+4. Check for breaking changes
+5. Verify idempotency
+
+## Configuration Management
+
+### Configuration Files
+- **Main Config**: [Location] (gitignored, user-specific)
+- **Example Config**: [Location]
+- **Schema**: [Location] (if using schema validation)
+- **Access**: Use appropriate config loaders/libraries
+
+### Configuration Best Practices
+- Validate all configuration against schemas
+- Support environment variables where appropriate
+- Use secure defaults
+- Document all configuration options
+- Support both interactive and file-based configuration
+
+## Testing Requirements
+
+### Test Coverage
+- Unit tests for critical business logic
+- Integration tests for workflows
+- End-to-end tests for critical paths
+- Validation tests for configuration
+
+### Test Execution
+- Run tests before committing
+- Ensure tests are idempotent
+- Clean up test artifacts
+- Use appropriate test frameworks
+
+## Documentation Standards
+
+### Required Documentation
+- **README.md**: Project overview and quick start
+- **docs/AI-AGENT-ONBOARDING.md**: Onboarding guide for AI agents
+- **docs/AI-AGENT-QUICK-REFERENCE.md**: Quick reference for common tasks
+- **Code Comments**: Document complex logic and non-obvious decisions
+
+### Documentation Best Practices
+- Keep documentation up to date
+- Use clear, concise language
+- Include examples and code snippets
+- Document assumptions and constraints
+- Provide troubleshooting guidance
+
+## Security Considerations
+
+### Sensitive Data
+- Never commit passwords, keys, tokens, or secrets
+- Use environment variables or secure config files
+- Validate and sanitize all inputs
+- Follow principle of least privilege
+- Audit access to sensitive resources
+
+### Security Best Practices
+- Use HTTPS for all network communication
+- Implement proper authentication and authorization
+- Validate and sanitize user inputs
+- Keep dependencies up to date
+- Follow security best practices for the technology stack
+
+## Configuration Self-Updates
+
+**IMPORTANT**: Agents should update their own configuration files when project requirements change.
+
+### When to Update Configuration
+
+Agents should update configuration files when:
+- New patterns or conventions emerge during development
+- Project structure changes significantly
+- New common tasks or workflows are established
+- Technology stack or dependencies change
+- Development workflow evolves
+- New best practices are discovered
+- Error handling patterns change
+- Testing approaches evolve
+
+### What to Update
+
+1. **`.cursorrules`**: 
+   - Update project context if it changes
+   - Add new critical rules as they emerge
+   - Update file paths if structure changes
+   - Document new workflows
+
+2. **`.cursor/rules/ai-instructions.mdc`**:
+   - Add new common patterns
+   - Update project structure documentation
+   - Add new common tasks
+   - Document new workflows
+
+3. **`docs/AI-AGENT-QUICK-REFERENCE.md`**:
+   - Add new code patterns
+   - Document new common tasks
+   - Add troubleshooting guidance
+   - Update utility function examples
+
+4. **`docs/AI-AGENT-ONBOARDING.md`**:
+   - Update if onboarding process changes
+   - Add new essential information
+   - Update workflows if they evolve
+
+### How to Update
+
+1. **Identify the Change**: Recognize when a pattern or requirement has changed
+2. **Review Current Config**: Check what needs updating
+3. **Make Updates**: Update relevant configuration files
+4. **Test Changes**: Verify updates work correctly
+5. **Document**: Note what changed and why
+6. **Commit**: Include configuration updates in commits
+
+### Update Guidelines
+
+- **Be Proactive**: Update configs when patterns emerge, don't wait
+- **Be Consistent**: Follow existing patterns and structure
+- **Be Complete**: Update all relevant files, not just one
+- **Be Clear**: Document why changes were made
+- **Be Careful**: Review changes before committing
+
+## When in Doubt
+
+1. **Check Documentation**: Review `docs/AI-AGENT-QUICK-REFERENCE.md` first
+2. **Review Similar Code**: Look for existing patterns in the codebase
+3. **Use Semantic Search**: Use `codebase_search` for semantic queries
+4. **Ask for Clarification**: When requirements are unclear, ask rather than assume
+5. **Test Incrementally**: Make small changes and test frequently
+6. **Update Configuration**: If patterns change, update agent configuration files
+
+## Additional Best Practices
+
+### Code Organization
+- Follow project structure conventions
+- Group related functionality together
+- Use clear, descriptive names
+- Maintain consistent code style
+- Organize imports and dependencies
+
+### Version Control
+- Write meaningful commit messages
+- Use feature branches for significant changes
+- Keep commits focused and atomic
+- Review changes before committing
+- Use appropriate .gitignore patterns
+
+### Performance
+- Profile before optimizing
+- Use appropriate data structures
+- Minimize network calls and I/O operations
+- Implement caching where beneficial
+- Consider scalability from the start
+
+### Maintainability
+- Write self-documenting code
+- Use consistent patterns throughout
+- Refactor when patterns emerge
+- Keep functions focused and small
+- Minimize coupling and maximize cohesion
+
+---
+
+**Remember**: The goal is to create maintainable, reliable, and efficient code that follows modern best practices while being safe to run multiple times and providing excellent user experience.
+

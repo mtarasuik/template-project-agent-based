@@ -1,0 +1,122 @@
+# AI Agent Instructions
+
+## Project Overview
+
+[Describe your project here - what it does, its purpose, and key technologies]
+
+## Key Principles
+
+1. **Idempotency**: All scripts and operations must be safe to run multiple times
+2. **Configuration-Driven**: Single source of truth for configuration
+3. **Validation**: All configs and code should be validated
+4. **Modularity**: Reusable libraries and components
+5. **Error Handling**: Graceful failures with clear error messages
+6. **User Experience**: Always provide feedback, no hanging functions
+7. **Code Quality**: Always validate code before completing tasks
+8. **Resource Management**: Check for existing resources before creating new ones
+
+## Project Structure
+
+```
+[Your project structure here]
+```
+
+## Common Patterns
+
+### Loading Configuration
+
+```[language]
+# Example pattern for loading configuration
+# Adapt to your project's configuration system
+```
+
+### Error Handling
+
+```[language]
+# Example pattern for error handling
+# Adapt to your project's error handling approach
+```
+
+### Idempotent Operations
+
+```[language]
+# Example pattern for idempotent operations
+# Adapt to your project's patterns
+```
+
+## Development Workflow
+
+1. **Before Making Changes**:
+   - Check for existing implementations
+   - Review related documentation
+   - Understand current system state
+   - Plan changes to maintain compatibility
+
+2. **During Development**:
+   - Write idempotent code
+   - Add comprehensive error handling
+   - Include logging and progress indicators
+   - Validate inputs and outputs
+   - Test incrementally
+
+3. **After Making Changes**:
+   - Validate code quality (lint, format, type check)
+   - Test the changes
+   - Update documentation if needed
+   - Check for breaking changes
+   - Verify idempotency
+   - **Update agent configuration if requirements changed**
+
+## Testing Requirements
+
+- Unit tests for critical business logic
+- Integration tests for workflows
+- End-to-end tests for critical paths
+- Validation tests for configuration
+- All tests should be idempotent
+
+## Documentation Standards
+
+- Keep documentation up to date
+- Use clear, concise language
+- Include examples and code snippets
+- Document assumptions and constraints
+- Provide troubleshooting guidance
+
+## Configuration Updates
+
+**IMPORTANT**: Agents should update their own configuration files when project requirements change.
+
+### When to Update
+
+Update configuration when:
+- New patterns or conventions emerge during development
+- Project structure changes significantly
+- New common tasks or workflows are established
+- Technology stack or dependencies change
+- Development workflow evolves
+- New best practices are discovered
+
+### What to Update
+
+1. **`.cursorrules`**: Update project context, critical rules, file paths, workflows
+2. **`.cursor/rules/ai-instructions.mdc`**: Add new patterns, update structure, document new tasks
+3. **`docs/AI-AGENT-QUICK-REFERENCE.md`**: Add new patterns, tasks, troubleshooting
+4. **`docs/AI-AGENT-ONBOARDING.md`**: Update if onboarding process changes
+
+### How to Update
+
+1. Identify the change or new pattern
+2. Review current configuration
+3. Update relevant files
+4. Test that changes work correctly
+5. Document what changed and why
+
+## When in Doubt
+
+1. Check `docs/AI-AGENT-QUICK-REFERENCE.md` first
+2. Review similar code in the codebase
+3. Use `codebase_search` for semantic queries
+4. Ask for clarification when requirements are unclear
+5. Test incrementally and frequently
+6. **Update configuration if patterns change**
